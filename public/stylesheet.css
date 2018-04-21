@@ -1,0 +1,90 @@
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #c90f0f, #fdd41d, #86db5e);
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 70px;
+  font-size: 30px;
+
+}
+
+#temp1 {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  line-height: 75px;
+}
+
+#powersavebox {
+  background-color: aqua;
+}
+
+button.link {
+  background: none;
+  border: none;
+
+}
+
+#powersave-box {
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  margin-bottom: 10px;
+}
+
+#reset {
+
+}
+
+.center {
+    line-height: 200px;
+    height: 200px;
+    border: 3px solid green;
+    text-align: center;
+}
+
+#site-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  
+  height: 5000px; /* Temp: Simulates a tall page. */
+}
+
+#site-canvas {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+
+  padding: 5% 0; /* Temp: Just spacing. */
+}
+
+#site-menu {
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -300px;
+  background: #428bca;
+  padding: 15px;
+}
+
+#site-wrapper.show-nav #site-canvas {
+  -webkit-transform: translateX(300px);
+  transform: translateX(300px);
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Thermostat</title>
+  <link rel="stylesheet" href="stylesheet.css" type='text/css'>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="Thermostat.js"></script>
+  <script src="index.js"></script>
+
+
+
+</head>
+
+<body>
+
+
+
+   <div class='flex-container'>
+        <div id="temp1" style="background-color:rgb(148, 201, 245)">
+            <h3>Temperature:</h3>
+            <h2 id="temp_text">20</h2>
+        </div>    
+        
+        
+        <div>
+            <button id="hotter" type="button">Hotter</button>
+        </div>
+
+        <div>
+            <button class="link" id="cooler" type="button">Cooler</button>
+        </div>
+        <div>
+            <button class="link" id="reset" type="button">Reset</button>
+        </div>
+        <div id="powersavebox">
+            <button class="link" id="powersave" type="button">Toggle Powersave</button>
+        </div>
+        <h2 style="color:rgb(148, 201, 245)">Current temperature:</h2>
+        <div id="weather">
+            <p id="weathertemp"></p>
+
+        </div>
+        <h2 style="color:rgb(148, 201, 245)">Location:</h2>
+        <div id="weather">
+            <p id="weatherlocation"></p>
+        </div>
+
+        <h1></h1>>
+    </div>
+
+    <script>$.get('http://api.openweathermap.org/data/2.5/weather?q=London&APPID=a5ecde71d07e5c6eccf45b7e5023acaf&units=metric', function(weather) {
+            $('#weatherlocation').text(weather.name);
+            $('#weathertemp').text(Math.floor(weather.main.temp));
+        });
+    </script>
+
+    <div id="weather">
+        <p id="weathertemp"></p>
+        <p id="weatherlocation"></p>
+    </div>
+
+    <div id="sinatra"></div>
+
+
+</body>
+</html>
